@@ -1,8 +1,5 @@
-// tailwind.config.js
-module.exports = {
-  content: [
-    "./src/**/*.{html,js,ts,tsx}",
-  ],
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts}"],
   theme: {
     extend: {
       fontFamily: {
@@ -19,7 +16,7 @@ module.exports = {
       boxShadow: {
         custom: '0 6px 18px rgba(17, 24, 39, 0.06)',
       }
-    },
+    }
   },
   plugins: [],
-};
+}
