@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <title>Pesquisa de Clientes</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../dist/output.css">
+
+  <script defer src="./script.js"></script>
+</head>
+<body class="bg-fundo text-texto font-sans">
+  <main class="py-9 px-10">
+    <div class="max-w-[1200px] mx-auto">
+
+      <header class="mb-5">
+        <h1 class="text-lg font-semibold">Pesquise o cliente que pretende consultar</h1>
+      </header>
+
+      <div class="flex gap-3 items-center">
+        <form id="formularioPesquisa"
+              class="flex items-center gap-2 flex-1 bg-cartao rounded-lg p-2 border border-borda shadow-custom"
+              autocomplete="off"
+              onsubmit="return false">
+          <input id="campoPesquisa"
+                 class="border-0 outline-none text-[15px] p-2 flex-1 bg-transparent"
+                 type="search"
+                 placeholder="Pesquisar..."
+                 aria-label="Pesquisar" />
+          <button type="submit"
+                  id="botaoPesquisar"
+                  class="bg-amarelo rounded-md py-2 px-4 shadow hover:bg-yellow-400 transition"
+                  title="Pesquisar"
+                  aria-label="Pesquisar">
+            🔍
+          </button>
+        </form>
+      </div>
+
+      <div class="flex gap-2 mt-4 flex-wrap">
+        <button class="filtro-btn bg-white border border-borda py-2 px-3 rounded-full text-sm text-texto shadow-custom"
+                data-filtro="cliente" type="button">Nº cliente</button>
+        <button class="filtro-btn bg-transparent border border-transparent py-2 px-3 rounded-full text-sm text-cinzento hover:bg-white hover:border-borda"
+                data-filtro="conta" type="button">Nº de conta</button>
+        <button class="filtro-btn bg-transparent border border-transparent py-2 px-3 rounded-full text-sm text-cinzento hover:bg-white hover:border-borda"
+                data-filtro="nif" type="button">NIF / NIPC</button>
+        <button class="filtro-btn bg-transparent border border-transparent py-2 px-3 rounded-full text-sm text-cinzento hover:bg-white hover:border-borda"
+                data-filtro="nome" type="button">Nome</button>
+        <button class="filtro-btn bg-transparent border border-transparent py-2 px-3 rounded-full text-sm text-cinzento hover:bg-white hover:border-borda"
+                data-filtro="telemovel" type="button">Nº telemóvel</button>
+      </div>
+
+      <p class="mt-6 mb-3 text-sm text-cinzento">Selecione o cliente que pretende consultar</p>
+
+      <section id="resultados">
+        <ul id="listaResultados" class="flex flex-col gap-3"></ul>
+      </section>
+
+    </div>
+  </main>
+</body>
+</html>
